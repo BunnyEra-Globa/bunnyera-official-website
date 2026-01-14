@@ -1,148 +1,148 @@
-# BunnyEra LLC - Official Website
+# BunnyEra Official Website
 
-The official global web presence of BunnyEra LLC. A modern, professional corporate website showcasing our high-performance AI engines and intelligent automation solutions for cross-border e-commerce brand operations.
+The official global web presence of BunnyEra LLC. Showcasing our high-performance AI engines and intelligent automation solutions for cross-border e-commerce brand operations.
 
-## 🚀 Features
+## Features
 
-- **Modern Hero Section**: Eye-catching hero with AI-driven e-commerce messaging
-- **Interactive AI Chat Demo**: Live chat demo powered by Groq SDK for lightning-fast AI responses
-- **Contact Form with MongoDB**: Lead capture system that saves data to MongoDB Atlas
-- **Responsive Design**: Fully responsive with modern high-tech aesthetic
-- **Performance Optimized**: Built with Next.js 14 and optimized for speed
-- **TypeScript**: Fully typed for better development experience
+- 🎨 Modern, high-tech design with Tailwind CSS
+- 🚀 Hero section showcasing AI-driven e-commerce engine
+- 💬 Interactive AI chat demo powered by Groq SDK
+- 📝 Contact form with MongoDB Atlas integration
+- ⚡ Built with Next.js and TypeScript
+- 🎯 Responsive and mobile-friendly design
 
-## 🛠️ Tech Stack
+## Getting Started
 
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **AI Integration**: Groq SDK
-- **Database**: MongoDB Atlas with Mongoose
-- **Deployment Ready**: Vercel-optimized
+### Prerequisites
 
-## 📋 Prerequisites
+- Node.js 18.x or later
+- MongoDB Atlas account
+- Groq API key
 
-- Node.js 18+ and npm
-- Groq API Key (get it from [https://console.groq.com/](https://console.groq.com/))
-- MongoDB Atlas account (get it from [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas))
+### Installation
 
-## 🚀 Getting Started
+1. Clone the repository:
+```bash
+git clone https://github.com/BunnyEra-Globa/bunnyera-official-website.git
+cd bunnyera-official-website
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/BunnyEra-Globa/bunnyera-official-website.git
-   cd bunnyera-official-website
-   ```
+2. Install dependencies:
+```bash
+npm install
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
 
-3. **Set up environment variables**
-   
-   Copy the example environment file:
-   ```bash
-   cp .env.example .env
-   ```
-   
-   Then edit `.env` and add your credentials:
-   ```env
-   GROQ_API_KEY=your_groq_api_key_here
-   MONGODB_URI=your_mongodb_connection_string_here
-   ```
+Edit `.env.local` and add your credentials:
+- `MONGODB_URI`: Your MongoDB Atlas connection string
+- `GROQ_API_KEY`: Your Groq API key
 
-4. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+### Development
 
-5. **Open your browser**
-   
-   Navigate to [http://localhost:3000](http://localhost:3000)
+Run the development server:
+```bash
+npm run dev
+```
 
-## 🏗️ Build for Production
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### Build
+
+Build for production:
 ```bash
 npm run build
+```
+
+### Start Production Server
+
+```bash
 npm start
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 bunnyera-official-website/
-├── app/
-│   ├── api/
-│   │   ├── chat/          # Groq AI chat endpoint
-│   │   └── contact/       # MongoDB contact form endpoint
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx          # Main page
-├── components/
-│   ├── Header.tsx         # Navigation header
-│   ├── Hero.tsx          # Hero section
-│   ├── Features.tsx       # Features section
-│   ├── AIChatDemo.tsx    # AI chat interface
-│   ├── ContactForm.tsx   # Contact form
-│   └── Footer.tsx        # Footer
-├── lib/
-│   └── mongodb.ts        # MongoDB connection utility
-├── models/
-│   └── Lead.ts          # Lead data model
-└── public/              # Static assets
+├── components/          # React components
+│   ├── HeroSection.tsx
+│   ├── AIChatDemo.tsx
+│   └── ContactForm.tsx
+├── lib/                # Library utilities
+│   ├── mongodb.ts      # MongoDB client
+│   └── groq.ts         # Groq SDK client
+├── pages/              # Next.js pages
+│   ├── api/           # API routes
+│   │   ├── chat.ts    # AI chat endpoint
+│   │   └── contact.ts # Contact form endpoint
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   └── index.tsx      # Homepage
+├── public/            # Static files
+├── styles/            # Global styles
+│   └── globals.css
+└── ...
 ```
 
-## 🎨 Key Components
+## API Routes
 
-### Hero Section
-- Dynamic gradient backgrounds
-- Animated stats display
-- Call-to-action buttons
-- Modern high-tech aesthetic
+### POST /api/chat
 
-### AI Chat Demo
-- Real-time chat interface
-- Powered by Groq SDK (Mixtral-8x7b model)
-- Contextual responses about BunnyEra services
-- Beautiful message bubbles with animations
+Send messages to the AI assistant.
 
-### Contact Form
-- Form validation
-- MongoDB Atlas integration
-- Success/error feedback
-- Lead data persistence
+**Request:**
+```json
+{
+  "message": "What AI solutions does BunnyEra offer?",
+  "history": []
+}
+```
 
-## 🔒 Environment Variables
+**Response:**
+```json
+{
+  "response": "BunnyEra offers..."
+}
+```
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `GROQ_API_KEY` | Groq API key for AI chat | Yes (for AI chat) |
-| `MONGODB_URI` | MongoDB connection string | Yes (for contact form) |
+### POST /api/contact
 
-## 🚢 Deployment
+Submit contact inquiries.
 
-This project is optimized for deployment on Vercel:
+**Request:**
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "company": "Example Inc",
+  "message": "I'm interested in your AI solutions"
+}
+```
 
-1. Push your code to GitHub
-2. Import the project in Vercel
-3. Add your environment variables
-4. Deploy!
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Thank you for contacting us!"
+}
+```
 
-## 📝 License
+## Technologies
 
-See the [LICENSE](LICENSE) file for details.
+- **Framework:** Next.js 15
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **AI:** Groq SDK (Mixtral-8x7b)
+- **Database:** MongoDB Atlas
+- **Deployment:** Vercel (recommended)
 
-## 🤝 Contributing
+## License
 
-This is a corporate website for BunnyEra LLC. For inquiries, please contact us through the website or at info@bunnyera.com.
+See LICENSE file for details.
 
-## 📧 Contact
+## Contact
 
-- Website: [https://bunnyera.com](https://bunnyera.com) (coming soon)
-- Email: info@bunnyera.com
-- GitHub: [@BunnyEra-Globa](https://github.com/BunnyEra-Globa)
-
----
-
-Built with ❤️ by BunnyEra LLC - Transforming E-Commerce with AI
+For questions or support, please contact us through the website or at info@bunnyera.com.
