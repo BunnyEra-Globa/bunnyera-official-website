@@ -1,148 +1,72 @@
-# BunnyEra Official Website
+BunnyEra Official Website
+Managed and Authorized by BUNNYERA LLC (New York, US). Developed and Maintained by the Hong Kong Operations & Research Hub.
 
-The official global web presence of BunnyEra LLC. Showcasing our high-performance AI engines and intelligent automation solutions for cross-border e-commerce brand operations.
+The official global web presence of BUNNYERA LLC. This platform showcases our high-performance AI engines and intelligent automation solutions specifically designed for cross-border e-commerce brand operations.
 
-## Features
+🌐 Corporate Architecture
+Global Headquarters: New York, NY, US.
 
-- 🎨 Modern, high-tech design with Tailwind CSS
-- 🚀 Hero section showcasing AI-driven e-commerce engine
-- 💬 Interactive AI chat demo powered by Groq SDK
-- 📝 Contact form with MongoDB Atlas integration
-- ⚡ Built with Next.js and TypeScript
-- 🎯 Responsive and mobile-friendly design
+Regional Operations Hub: Hong Kong (APAC).
 
-## Getting Started
+Technical Focus: High-performance Node.js backends, AI engine development, and cross-border supply chain monitoring.
 
-### Prerequisites
+🚀 Features
+Corporate Identity: Full alignment with our US-registered legal entity.
 
-- Node.js 18.x or later
-- MongoDB Atlas account
-- Groq API key
+High-Tech Interface: Modern design implemented with Next.js 15 and Tailwind CSS.
 
-### Installation
+AI Chat Demo: Interactive experience powered by Groq SDK (Mixtral-8x7b).
 
-1. Clone the repository:
-```bash
+Data Integrity: Secure contact form with MongoDB Atlas integration.
+
+Enterprise Standards: Built with TypeScript for maximum reliability and scalability.
+
+🛠️ Getting Started
+Prerequisites
+Node.js 18.x or later
+
+MongoDB Atlas account
+
+Groq API key
+
+Installation
+Clone the repository:
+
+Bash
 git clone https://github.com/BunnyEra-Globa/bunnyera-official-website.git
 cd bunnyera-official-website
-```
+Install dependencies:
 
-2. Install dependencies:
-```bash
+Bash
 npm install
-```
+Set up environment variables:
 
-3. Set up environment variables:
-```bash
+Bash
 cp .env.example .env.local
-```
+Edit .env.local and add your credentials:
 
-Edit `.env.local` and add your credentials:
-- `MONGODB_URI`: Your MongoDB Atlas connection string
-- `GROQ_API_KEY`: Your Groq API key
+MONGODB_URI: Your MongoDB Atlas connection string
 
-### Development
+GROQ_API_KEY: Your Groq API key
 
-Run the development server:
-```bash
+Development
+Bash
 npm run dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Build
-
-Build for production:
-```bash
-npm run build
-```
-
-### Start Production Server
-
-```bash
-npm start
-```
-
-## Project Structure
-
-```
+📂 Project Structure
 bunnyera-official-website/
-├── components/          # React components
-│   ├── HeroSection.tsx
-│   ├── AIChatDemo.tsx
-│   └── ContactForm.tsx
-├── lib/                # Library utilities
-│   ├── mongodb.ts      # MongoDB client
-│   └── groq.ts         # Groq SDK client
-├── pages/              # Next.js pages
-│   ├── api/           # API routes
-│   │   ├── chat.ts    # AI chat endpoint
-│   │   └── contact.ts # Contact form endpoint
-│   ├── _app.tsx
-│   ├── _document.tsx
-│   └── index.tsx      # Homepage
-├── public/            # Static files
-├── styles/            # Global styles
-│   └── globals.css
-└── ...
-```
+├── components/          # Enterprise React components
+├── lib/                 # Secure SDK and Database clients
+├── pages/               # Next.js App router & API routes
+├── public/              # Global brand assets
+└── styles/              # Corporate theme definitions
+⚖️ License
+Copyright © 2026 BUNNYERA LLC. All rights reserved. Distributed under the MIT License. See LICENSE for more legal information.
 
-## API Routes
+📩 Contact & Support
+Official Website: https://bunnyera.com
 
-### POST /api/chat
+Business Inquiries: info@bunnyera.com
 
-Send messages to the AI assistant.
-
-**Request:**
-```json
-{
-  "message": "What AI solutions does BunnyEra offer?",
-  "history": []
-}
-```
-
-**Response:**
-```json
-{
-  "response": "BunnyEra offers..."
-}
-```
-
-### POST /api/contact
-
-Submit contact inquiries.
-
-**Request:**
-```json
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "company": "Example Inc",
-  "message": "I'm interested in your AI solutions"
-}
-```
-
-**Response:**
-```json
-{
-  "success": true,
-  "message": "Thank you for contacting us!"
-}
-```
-
-## Technologies
-
-- **Framework:** Next.js 15
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **AI:** Groq SDK (Mixtral-8x7b)
-- **Database:** MongoDB Atlas
-- **Deployment:** Vercel (recommended)
-
-## License
-
-See LICENSE file for details.
-
-## Contact
-
-For questions or support, please contact us through the website or at info@bunnyera.com.
+Global Support: Through our GitHub organization portal.
